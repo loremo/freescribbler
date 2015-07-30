@@ -1,0 +1,27 @@
+2014-11-13 01:36:42.916 FSApp[12303:812314] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/hancock/Library/Developer/CoreSimulator/Devices/080982AA-650A-4DEE-AFCC-903E2D00D6AC/data/Containers/Data/Application/0F712753-9935-49A4-BA43-26A7C4109C59/Library/Cookies/Cookies.binarycookies
+2014-11-13 01:36:43.486 FSApp[12303:812314] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-13 01:36:43.487 FSApp[12303:812314] Multi-tasking -> Device: YES, App: YES
+2014-11-13 01:36:43.520 FSApp[12303:812314] Unlimited access to network resources
+2014-11-13 01:36:43.557 FSApp[12303:812314] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-13 01:36:44.067 FSApp[12303:812314] Resetting plugins due to page load.
+2014-11-13 01:36:44.679 FSApp[12303:812314] Finished load of: file:///Users/hancock/Library/Developer/CoreSimulator/Devices/080982AA-650A-4DEE-AFCC-903E2D00D6AC/data/Containers/Bundle/Application/510E8A54-A8EC-4CEB-98BF-3B76EB050F51/FSApp.app/www/index.html
+2014-11-18 22:58:34.163 FSApp[18281:1360199] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/hancock/Library/Developer/CoreSimulator/Devices/080982AA-650A-4DEE-AFCC-903E2D00D6AC/data/Containers/Data/Application/77F7A7B3-D88C-4F96-A753-439AC1C81FAB/Library/Cookies/Cookies.binarycookies
+2014-11-18 22:58:35.622 FSApp[18281:1360199] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-18 22:58:35.623 FSApp[18281:1360199] Multi-tasking -> Device: YES, App: YES
+2014-11-18 22:58:35.716 FSApp[18281:1360199] Unlimited access to network resources
+2014-11-18 22:58:35.872 FSApp[18281:1360199] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-18 22:58:39.331 FSApp[18281:1360199] Resetting plugins due to page load.
+2014-11-18 22:58:40.193 FSApp[18281:1360199] Finished load of: file:///Users/hancock/Library/Developer/CoreSimulator/Devices/080982AA-650A-4DEE-AFCC-903E2D00D6AC/data/Containers/Bundle/Application/5EDC0DE7-EB0E-4B32-935F-B38DB5BEF20D/FSApp.app/www/index.html
+2014-11-18 22:58:40.365 FSApp[18281:1360199] THREAD WARNING: ['Device'] took '14.353027' ms. Plugin should use a background thread.

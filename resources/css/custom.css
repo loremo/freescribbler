@@ -1,0 +1,504 @@
+.poster_avatar {
+	border-radius: 25px;
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+	margin-right: 5px;
+	float: left;
+}
+
+.author_avatar{
+	border-radius: 25px;
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+	margin-right: 5px;
+	float: left;
+	position: relative;
+	top: -10px;
+	left: -10px;
+}
+
+.mainWrapper {
+	margin: 0px 10px 0px 10px;
+}
+
+.postWrapper {
+	background: none repeat scroll 0 0 #fff;
+        border-radius: 15px;
+        box-shadow: 0 0 2px grey;
+        font-weight: normal;
+        margin: 0 10px 30px 10px;
+        padding-bottom: 45px;
+        position: relative;
+}
+
+.postAvatar {
+	border-radius: 20px;
+	height:40px;
+        width:40px;
+        display:inline-block;
+        align: left;
+        vertical-align: top;
+        left: -10px;
+        top: -10px;
+        position: relative;
+}
+
+.postTime {
+	display:inline-block;
+        padding: 0 0 0 5px;
+        align: left;
+        vertical-align: top;
+        position: absolute;
+        top: 20px;
+        left: 40px;
+}
+
+.posterName {
+	font-weight: bold;
+	padding: 5px 0 0 5px;
+        align: left;
+        display:inline-block;
+        vertical-align: top;
+}
+
+.postDeleteBtn {
+    background-image: url("../../mockdata/img/delete.png");
+    background-size: cover;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.postPics {
+	margin: 10px;
+}
+
+.postOnePicWrapper {
+	display: inline-block;
+        margin-bottom: 5px;
+        border-radius: 15px;
+}
+
+.postOnePic {
+	border-radius: 15px;
+        width: 100%;
+        pointer-events: none;
+}
+
+.postContent {
+	margin: 10px;
+}
+
+.postSeparator {
+	margin: 10px;
+        height: 1px;
+        background-color: #ddd;
+        display: block;
+}
+
+.postLikeBtn {
+	background-image: url("../../mockdata/img/freescribbler_like1.png");
+        background-size: cover;
+        display: inline-block;
+        height: 35px;
+        width: 40px;
+        position: absolute;
+        right: 65px;
+        text-align: center;
+        line-height: 35px;
+}
+
+.postLikeBtn2 {
+	background-image: url("../../mockdata/img/freescribbler_like2.png");
+        background-size: cover;
+        display: inline-block;
+        height: 35px;
+        width: 40px;
+        position: absolute;
+        right: 65px;
+        text-align: center;
+        line-height: 35px;
+}
+
+.postComment {
+	background-image: url("../../mockdata/img/freescribbler_comment1.png");
+        background-size: cover;
+        display: inline-block;
+        height: 35px;
+        width: 43px;
+        position: absolute;
+        right: 10px;
+        text-align: center;
+        line-height: 35px;
+}
+
+.profileWrapper{
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 2px gray;
+        margin: 5px 5px 30px 5px;
+        height: 250px;
+}
+
+.leftprofilepart{
+        
+}
+
+.rightprofilepart{
+        padding: 0 10px;
+}
+
+.profileImage{
+	border-radius: 50px;
+	width: 100px;
+	height: 100px;
+	vertical-align: middle;
+	margin: 5px;
+	position: relative;
+        display: inline-block;
+        vertical-align: top;
+}
+
+.writepostBtn{
+        margin: 5px;
+        position: absolute;
+        width: 100px;
+        height: 45px;
+	bottom: 0;
+}
+
+.profileUsername{
+        font-weight: bold;
+        color: #3A4546;
+        font-size: 16px;
+        vertical-align: top;
+        line-height: 20px;
+        margin-top: 5px;
+}
+
+.profileMoneyLabel{
+        color: #3A4546;
+        font-size: 13px;
+        height: 20px;
+        min-width: 100px;
+        display: inline-block;
+        position: absolute;
+        line-height: 20px;
+        top:30px;
+}
+
+.profileMoneyButton{
+        font-weight: bold;
+        color: #3A4546;
+        font-size: 13px;
+        height: 20px;
+        display: inline-block;
+        position: absolute;
+        top:30px;
+        right: 10px;
+}
+
+.profileUserDescription{
+        color: #3A4546;
+        font-size: 16px;
+        height: 80px;
+        width: 100%;
+        position: relative;
+        top: 40px;
+}
+
+.topButtonBlock{
+        margin-bottom: 5px;
+        position: relative;
+        top: 45px;
+}
+
+.userposts{
+        margin: 0 5px 0 0;
+}
+
+.usersubscribes{
+        margin: 0 5px 0 0;
+}
+
+.usersubscribers{
+        margin: 0 0 0 0;
+}
+
+.subscribeuser{
+        margin: 0 5px 0 0;
+}
+
+.ignoruser{
+        margin: 0 0 0 0;
+}
+
+
+.userLightWrapper {
+	background: none repeat scroll 0 0 #fff;
+        border-radius: 15px;
+        box-shadow: 0 0 2px grey;
+        font-weight: normal;
+        margin: 0 10px 30px 10px;
+        padding: 10px;
+        position: relative;
+}
+
+.userLightItem {
+	font-weight: normal;
+        margin-bottom: 20px;
+        padding: 10px;
+        position: relative;
+}
+
+.userAvatar {
+	border-radius: 20px;
+	height:40px;
+        width:40px;
+        display:inline-block;
+        align: left;
+        vertical-align: top;
+        left: -10px;
+        top: -10px;
+        position: relative;
+}
+
+.userLightAdd {
+	height:30px;
+        width:80px;
+        display:inline-block;
+        position: absolute;
+        right: 0;
+        background-color: green;
+}
+
+.userLightRemove {
+	height:30px;
+        width:80px;
+        display:inline-block;
+        position: absolute;
+        right: 0;
+        background-color: yellow;
+}
+
+
+.bottomButtonBlock{
+        position: relative;
+        top: 45px;
+}
+
+.postWrapper {
+	font-weight: normal;
+        margin-bottom: 30px;
+        position: relative;
+}
+
+
+
+
+
+.event_text{
+	vertical-align: middle;
+	padding: 5px;
+}
+
+.new_post_image {
+	border-radius: 15px;
+	max-width: 93%;
+	height:250px;
+	vertical-align: middle;
+	align: center;
+	border: solid 1px #E1E2E4;
+	margin: 10px;
+}
+
+.new_post_text{
+	margin-bottom: 15px;
+}
+
+
+
+
+
+.post_main_img
+{
+	border-radius: 25px;
+	max-width: 100%;
+	padding: 5px;
+	vertical-align: middle;
+	align: center;
+}
+
+.one_article{
+	margin: 10px;
+	
+}
+.event_block{
+	padding-top: 5px;
+	
+}
+
+.event_content {
+	width: 60%;
+	vertical-align: top;
+	float: left;
+}
+
+.refreshEventsBtn, .refreshNewsBtn, .refreshBestBtn {
+	margin: 5px 5px 5px 5px;
+	
+}
+
+ .homeprofileImage{
+ 	height: 100px;
+	width: 100px;
+	margin: 5px 5px 5px 5px;
+	float: left;
+ }
+ 
+ .homeFieldSet{
+ margin: .0em .5em .5em;
+ }
+ 
+.logoutBtn{
+	margin: 5px 10px 5px 5px;
+}
+   
+.one_article{
+	border-radius: 15px;
+	box-shadow: 0px 0px 2px grey;
+	background: #fff;
+	margin-bottom: 15px;
+}
+
+.post_text{
+	margin: 10px;
+}               
+.comments_btn{
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	font-size: 10px;
+	background-image: url("../../mockdata/img/icons/comment.png");
+	margin-right: 10px;
+	vertical-align: top;
+	text-align: center;
+	padding-top:7px;
+	background-size: cover;
+	color: #3A4546;	
+}	 
+
+.da_btn_plus{
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	font-size: 10px;
+	background-image: url("../../mockdata/img/icons/heart.png");
+	margin-right: 10px;
+	vertical-align: top;
+	padding-top:7px;
+	text-align: center;
+	background-size: cover;
+	color: #3A4546;
+}
+.spacer{
+	display: inline-block;
+	width: 70%;
+}
+
+.commentSpacer
+{
+	height:5px;
+}
+.listViewComment {
+	background: #F4F4F4;
+	border: solid 1px #E1E2E4;
+	border-radius: 15px;
+	margin: 5px;
+}
+.comment_block{
+	margin-bottom: 10px;
+}
+
+.x-html{
+	padding: 0;
+}
+.comment_block author_avatar
+{
+	width: 25px;
+	height: 25px;
+}
+.listViewComment .author_name{
+	font-size: 12px; 
+}
+.searchfield{
+	border: solid 1px #E1E2E4;
+	border-radius: 15px;
+	padding:15px;
+	margin: 15px;
+}
+
+.one_event{
+	display: inline-block;
+	width:100%;
+	padding:2px;
+	margin: 2px;
+}
+
+.searchsegmentedbtn{
+	margin:10px;
+}
+
+.homesegmentedbtn{
+	margin:5px;
+	font-size:0.7em;
+}
+
+.x-field-search .x-field-input .x-form-field {
+margin-left: 0em;
+padding-left:25px
+}
+
+.user_block{
+	float: left;
+	display: block;
+}
+.user_avatar
+{
+	width: 45px;
+	height: 45px;
+	border-radius: 40px;
+	
+}
+.user_name{
+	width: 70%;
+	vertical-align: top;
+	padding-left:15px;	
+	padding-top:5px;
+	float: left;
+	display: inline-block;
+}
+
+.friend_sign {
+	font-weight: 450;
+	color: white;
+	font-size: 30px;
+	text-align: center;
+	vertical-align: bottom;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	border-radius: 15px;
+	background: #87ded6;
+	line-height:25px; 
+}
+.friend_span{
+	line-height:25px; 
+	vertical-align:top;
+	padding:1px;
+}
