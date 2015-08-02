@@ -58,7 +58,6 @@ Ext.define('FreescribbleApp.view.PostItem', {
         return Ext.factory(config, Ext.Button, this.getAuthorName());
     },
     updateAuthorName: function(newAuthorName, oldAuthorName) {
-        
         if (newAuthorName) {
             newAuthorName.on('tap', this.onAuthorTap, this);
 
@@ -72,7 +71,6 @@ Ext.define('FreescribbleApp.view.PostItem', {
         return Ext.factory(config, Ext.Img, this.getAvatar());
     },
     updateAvatar: function(newAvatar, oldAvatar) {
-        
         if (newAvatar) {
             newAvatar.on('tap', this.onAuthorTap, this);
             this.add(newAvatar);
@@ -84,7 +82,6 @@ Ext.define('FreescribbleApp.view.PostItem', {
     
     onAuthorTap: function(button, e) {
         var record = this.getRecord(), me = this;
-        
         var upperview = me.getDataview().up('main2').down('homepage');
         upperview.fireEvent('showUser', record.get('userid'));
         
@@ -299,8 +296,8 @@ Ext.define('FreescribbleApp.view.PostItem', {
     
     onPostTap: function(button, e) {
         var record = this.getRecord(), me = this;
-        
-        var upperview = me.getDataview().up().up().up();
+        console.log('onPostTap');
+        var upperview = me.getDataview().up('main2').down('homepage');
         upperview.fireEvent('showPost', record);
     },
 });

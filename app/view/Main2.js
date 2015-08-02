@@ -8,18 +8,14 @@ Ext.define('FreescribbleApp.view.Main2', {
                 xtype: 'homepage',
                 itemId: 'homeWrapper'
             },
-            {
-                xtype: 'newspageview',
+           {
+                xtype: 'newspage',
                 itemId: 'newsWrapper'
-            },
-            /*{
-                xtype: 'makepostpage',
-                itemId: 'homeWrapper'
             },
             {
                 xtype: 'eventpage',
                 itemId: 'eventWrapper'
-            }*/
+            }
         ]
     }
 });

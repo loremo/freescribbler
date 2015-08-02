@@ -1,9 +1,8 @@
-Ext.define('FreescribbleApp.store.CommentStore', {
+Ext.define('FreescribbleApp.store.EventStore', {
     extend: 'Ext.data.Store',
-    requires: 'FreescribbleApp.model.CommentModel',
+    requires: 'FreescribbleApp.model.EventModel',
     config: {
-    	storeId: 'commentstore',
-        model: 'FreescribbleApp.model.CommentModel',
+    	model: 'FreescribbleApp.model.EventModel',
         proxy: {
             type: 'ajax',
             actionMethods: {
@@ -13,8 +12,7 @@ Ext.define('FreescribbleApp.store.CommentStore', {
                 destroy: 'POST'
             },
             api: {
-                read: 'http://freescribbler.com/test.php',
-                destroy: 'mockdata/deleteComment.php',
+                read: 'http://freescribbler.com/test.php'
             },
             reader: {
                 type: 'json',
@@ -32,8 +30,7 @@ Ext.define('FreescribbleApp.store.CommentStore', {
                 console.log('get Home posts');
                 var rawData = store.getProxy().getReader().rawData;
                 this.getProxy().setExtraParams({
-                    offset: rawData.lastcomment,
-                    limit: 30
+                    offset: rawData.lastevent
                 });
             }
         }

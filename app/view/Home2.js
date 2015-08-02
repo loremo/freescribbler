@@ -4,7 +4,6 @@ Ext.define('FreescribbleApp.view.Home2', {
     config: {
         styleHtmlContent: true,
         scrollable: true,
-        autoScroll: true,
         items:[
             {
                 xtype: 'titlebarview'

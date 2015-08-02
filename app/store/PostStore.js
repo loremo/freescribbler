@@ -2,8 +2,7 @@ Ext.define('FreescribbleApp.store.PostStore', {
     extend: 'Ext.data.Store',
     requires: 'FreescribbleApp.model.PostModel',
     config: {
-    	storeId: 'poststore',
-        model: 'FreescribbleApp.model.PostModel',
+    	model: 'FreescribbleApp.model.PostModel',
         params: {
             limit: 20
         },

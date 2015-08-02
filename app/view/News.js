@@ -1,12 +1,15 @@
 Ext.define('FreescribbleApp.view.News', {
-    extend: 'Ext.dataview.DataView',
-    xtype: 'newspageview',
+    extend: 'Ext.Panel',
+    xtype: 'newspage',
     config: {
+        styleHtmlContent: true,
+        scrollable: true,
         title: 'Новости',
         iconCls: 'news',
-        styleHtmlContent: true,
-        itemId: 'newsDataViewId',
-        defaultType: 'postitem',
-        useComponents: true
+        items:[
+            {
+                itemId: 'newsContent',
+            }
+        ]
     }
 });

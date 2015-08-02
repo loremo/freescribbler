@@ -22,7 +22,7 @@ Ext.define("FreescribbleApp.controller.PostPageController", {
         
         control: {
             postPage: {
-                showPost: 'onShowPost'
+                active123: 'onShowPost'
             },
             backBtn: {
             	tap: 'backBtnTaped'
@@ -67,6 +67,7 @@ Ext.define("FreescribbleApp.controller.PostPageController", {
     onShowPost: function (post) {
         var me = this;
         me.setPost(post);
+        console.log('onShowPost2');
         me.getAvatar().setSrc(post.get('avatar'));
         me.getPosterName().setHtml(post.get('username'));
         me.getPostTime().setHtml(post.get('posttime'));
@@ -96,6 +97,8 @@ Ext.define("FreescribbleApp.controller.PostPageController", {
             me.getPostPics().add(picImage);
             
         });
+        
+        var commentStage  = me.getCommentStage();
         me.getPostContent().setHtml(post.get('postcontent'));
         me.getPostLikeBtn().setHtml(post.get('postlikes'));
         me.getPostComment().setHtml(post.get('commentnum'));
@@ -110,26 +113,23 @@ Ext.define("FreescribbleApp.controller.PostPageController", {
                 postid: post.get('postid')
             }
         });
-        
+        commentStore.getProxy().setExtraParams({
+            limit: 10
+        });
         var commentView = Ext.create('FreescribbleApp.view.CommentDataView');
-        var postStageInside = me.getCommentStage().getComponent('commentDataViewId');
-        if (postStageInside) {
-            postStageInside.destroy();
-        }
+        commentStage.removeAll();
+        me.getMoreComments().show();
         me.getMoreComments().element.on('tap', this.onMoreComments, this);
         if (post.get('commentnum') < 10) {
+            console.log(post.get('commentnum'));
             me.getMoreComments().hide();
         }
         commentStore.load();
         commentStore.on('load', function(){
             console.log('currentView');
             commentView.setStore(commentStore);
-            me.getCommentStage().add(commentView);
-            /*me.setScroller(me.getHomePage().getScrollable().getScroller());
-            me.getScroller().on({
-                scrollend: me.onScrollEnd,
-                scope: me
-            });*/
+            commentStage.add(commentView);
+            commentStore.sort('commentid');
         });	
     },
     
@@ -183,11 +183,15 @@ Ext.define("FreescribbleApp.controller.PostPageController", {
             var commentContentStore = commentStageInside.getStore();
             commentContentStore.load({
                 addRecords: true,
+                callback: function(records, operation, success) {
+                    // the operation object contains all of the details of the load operation
+                    if (records.length < 30) {
+                        me.getMoreComments().hide();
+                        me.setFullyLoaded(true);
+                    }
+                    commentContentStore.sort('commentid');
+                },
             });
-            commentContentStore.on('load', function(){
-                me.setLoading(false);
-                commentContentStore.sort('commentid');
-            });	
         }
     },
 });

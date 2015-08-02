@@ -240,11 +240,10 @@ Ext.define("FreescribbleApp.controller.Home2Controller", {
                 userid: user
             }
         });
+        postStore.setStoreId('poststore');
         var postView = Ext.create('FreescribbleApp.view.PostDataView');
-        var homeStageInside = homeStage.getComponent('homeDataViewId');
-        if (homeStageInside) {
-            homeStageInside.destroy();
-        }
+        
+        homeStage.removeAll();
         postStore.load();
         postStore.on('load', function(){
             console.log('currentView');
