@@ -16,8 +16,12 @@ Ext.application({
     requires: ['Ext.MessageBox', 'Ext.SegmentedButton', 'Ext.field.Search', 'Ext.field.Toggle', 'Ext.field.Email'],
     models: ['UserModel', 'UserLightModel', 'PostModel', 'CommentModel', 'PicModel', 'LogInCredential'],
     stores:['UserStore', 'PostStore', 'CommentStore', 'UserLightStore', 'LogInLocal', 'LogInSession'],
-    views: ['Main2', 'Home', 'Home2', 'News', 'PostPage', 'Login', 'UserInfoView', 'Titlebarview', 'PostItem', 'CommentItem', 'UserLightItem', 'PostDataView', 'CommentDataView', 'OnePost'],
-    controllers: [ 'LoginController', 'HomeController', 'Home2Controller', 'NewsController', 'PostPageController'],
+    views: ['Main2', 'Login', 
+        'Home', 'Home2', 'News', 'Event', 
+        'PostDataView', 'EventDataView', 'CommentDataView', 'UserLightDataView',
+        'PostItem', 'CommentItem', 'UserLightItem', 'EventItem',
+        'PostPage', 'UserInfoView', 'Titlebarview', 'OnePost'],
+    controllers: [ 'LoginController', 'HomeController', 'Home2Controller', 'NewsController', 'EventController', 'PostPageController'],
 
     icon: {
         '57': 'resources/icons/Icon.png',
