@@ -17,11 +17,19 @@ Ext.application({
     models: ['UserModel', 'UserLightModel', 'PostModel', 'CommentModel', 'PicModel', 'LogInCredential'],
     stores:['UserStore', 'PostStore', 'CommentStore', 'UserLightStore', 'LogInLocal', 'LogInSession'],
     views: ['Main2', 'Login', 
+<<<<<<< HEAD
         'Home', 'Home2', 'News', 'Event', 
         'PostDataView', 'EventDataView', 'CommentDataView', 'UserLightDataView',
         'PostItem', 'CommentItem', 'UserLightItem', 'EventItem',
         'PostPage', 'UserInfoView', 'Titlebarview', 'OnePost'],
     controllers: [ 'LoginController', 'HomeController', 'Home2Controller', 'NewsController', 'EventController', 'PostPageController'],
+=======
+        'Home', 'Home2', 'News', 'Event', 'NewPost', 'Input', 'PicProcessing',
+        'PostDataView', 'EventDataView', 'CommentDataView', 'UserLightDataView',
+        'PostItem', 'CommentItem', 'UserLightItem', 'EventItem',
+        'PostPage', 'UserInfoView', 'Titlebarview', 'OnePost'],
+    controllers: [ 'LoginController', 'HomeController', 'Home2Controller', 'NewsController', 'EventController', 'PostPageController', 'NewPostController', 'PicProcessingController'],
+>>>>>>> master
 
     icon: {
         '57': 'resources/icons/Icon.png',
