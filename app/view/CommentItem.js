@@ -123,12 +123,12 @@ Ext.define('FreescribbleApp.view.CommentItem', {
             function (answer) {
 
                 if (answer === 'yes') {
-                    me.getDataview().getStore().remove(record);
+                    /*me.getDataview().getStore().remove(record);
                     me.getDataview().getStore().getProxy().setExtraParams({
                         user: localStorage.getItem('userId'),
                         token: localStorage.getItem('token')
                     });
-                    me.getDataview().getStore().sync();
+                    me.getDataview().getStore().sync();*/
                     me.destroy();
                 }
             }

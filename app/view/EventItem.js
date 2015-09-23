@@ -85,4 +85,76 @@ Ext.define('FreescribbleApp.view.EventItem', {
             this.remove(oldEventTime);
         }
     },
+    
+    applyEventType: function(config) {
+        return Ext.factory(config, Ext.Img, this.getEventType());
+    },
+    updateEventType: function(newEventType, oldEventType) {
+        var record = this.getRecord(),
+                me = this,
+                recordType = record.get('eventart');
+        if (newEventType) {
+            if (recordType == 'FRIEND') {
+                newEventType.setSrc('../../freescribble/mockdata/img/freescribbler_add.png');
+            }
+            if (recordType == 'DA') {
+                newEventType.setSrc('../../freescribble/mockdata/img/freescribbler_like1.png');
+            }
+            if (recordType == 'COMMENT') {
+                newEventType.setSrc('../../freescribble/mockdata/img/freescribbler_comment1.png');
+            }
+            if (recordType == 'LINK') {
+                newEventType.setSrc('../../freescribble/mockdata/img/freescribbler_link.png');
+            }
+            this.add(newEventType);
+        }
+        if (oldEventType) {
+            this.remove(oldEventType);
+        }
+    },
+    
+    applyEventPost: function(config) {
+        return Ext.factory(config, Ext.Component, this.getEventPost());
+    },
+    updateEventPost: function(newEventPost, oldEventPost) {
+        var record      = this.getRecord(),
+                me      = this,
+        recordPostId    = record.get('articleid'),
+        recordPostCont  = record.get('articlecontent'),
+        picRecords      = record.pics();
+        if (newEventPost) {
+            if (recordPostId != -1) {
+                if (picRecords.first()) {
+                    console.log(picRecords.first());
+                    newEventPost.setHtml('<div style="background-image: url(' + picRecords.first().data.picname + ')" class="eventPic"></div>');
+                }
+                else {
+                    newEventPost.setHtml(recordPostCont);
+                }
+            }
+            this.add(newEventPost);
+        }
+        if (oldEventPost) {
+            this.remove(oldEventPost);
+        }
+    },
+    
+    applyEventComment: function(config) {
+        return Ext.factory(config, Ext.Component, this.getEventComment());
+    },
+    updateEventComment: function(newEventComment, oldEventComment) {
+        var record          = this.getRecord(),
+                me          = this,
+        recordCommentId     = record.get('commentid'),
+        recordCommentCont   = record.get('commentcontent');
+        if (newEventComment) {
+            if (recordCommentId != -1) {
+                newEventComment.setHtml(recordCommentCont);
+            }
+            this.add(newEventComment);
+        }
+        if (oldEventComment) {
+            this.remove(oldEventComment);
+        }
+    },
 });

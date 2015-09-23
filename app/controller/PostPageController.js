@@ -17,6 +17,8 @@ Ext.define("FreescribbleApp.controller.PostPageController", {
             postLikeBtn: '[itemId = postLikeBtn]',
             postComment: '[itemId = postComment]',
             commentStage: '[itemId = commentBlock]',
+            commentInput: '[itemId = commentInputField]',
+            commentSubmit: '[itemId = submitCommentBtn]',
             moreComments: '[itemId = moreCommentsBtn]',
         },
         
@@ -44,6 +46,9 @@ Ext.define("FreescribbleApp.controller.PostPageController", {
             },
             postLikeBtn: {
                 tap: 'onPostLikeBtnTap'
+            },
+            commentSubmit: {
+                tap: 'onCommentSubmit'
             }
         },
         post: null,
@@ -193,5 +198,41 @@ Ext.define("FreescribbleApp.controller.PostPageController", {
                 },
             });
         }
+    },
+    
+    onCommentSubmit: function() {
+        var me = this,
+            loginSessionStore = Ext.getStore('LogInSession').getData();
+        sessionStore = loginSessionStore.items[0].data;
+        Ext.Ajax.request({
+            url: 'http://freescribbler.com/test.php',
+            method: 'post',
+            params: {
+                act: 'CREATECOMMENT',
+                connectid: sessionStore.connectid,
+                token: sessionStore.token,
+                clientcode: 123123123,
+                commenttext: encodeURIComponent(me.getCommentInput().getValue()),
+                postid: me.getPost().get('postid')
+            },
+            success: function (response) {
+                var data = Ext.JSON.decode(response.responseText);
+                if (data.success) {
+                    var commentStage  = me.getCommentStage();
+                    var commentStageInside = commentStage.getComponent('commentDataViewId');
+                    var commentContentStore = commentStageInside.getStore();
+                    console.log(data.data.commentid);
+                    var new_comment = Ext.create('FreescribbleApp.model.CommentModel', {
+                        useravatar: data.data.useravatar,
+                        userid: data.data.userid,
+                        username: data.data.username,
+                        commentid: data.data.commentid,
+                        commentcontent: data.data.commentcontent,
+                        commenttime: 0
+                    });
+                    commentContentStore.add(new_comment);
+                }
+            }
+        });
     },
 });

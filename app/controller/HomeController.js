@@ -11,12 +11,14 @@ Ext.define("FreescribbleApp.controller.HomeController", {
             postPage: 'postpage',
             mainFrame: 'homepage',
             superMain: 'main2',
+            menuBtn: '[itemId = menuButton]'
         },
         
         control: {
             mainFrame: {
                 showUser: 'onShowUser',
-                showPost: 'onShowPost'
+                showPost: 'onShowPost',
+                activate: 'onActivate'
             }
         }
     },
@@ -27,8 +29,6 @@ Ext.define("FreescribbleApp.controller.HomeController", {
     	 
     launch: function () {
         console.log('LAUNCH from HomeFrController');
-        this.getMainFrame().on('activate', this.onActivate, this);
-        this.getMainFrame().fireEvent('activate');
     },
     
     onShowUser: function(user) {
@@ -53,7 +53,6 @@ Ext.define("FreescribbleApp.controller.HomeController", {
         console.log('homeController onActivate');
         var loginSessionStore = Ext.getStore('LogInSession').getData();
         sessionStore = loginSessionStore.items[0].data;
-        
         this.getMainFrame().fireEvent('showUser', sessionStore.connectid);
     },
     

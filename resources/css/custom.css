@@ -321,7 +321,21 @@
 	margin-bottom: 15px;
 }
 
-
+.x-popup-menu {
+    box-shadow: 0 0 0.5em;
+    border-radius: 0.3em;
+    color: #002f50;
+    background: #E1E2E4;
+}
+.x-popup-menu .x-anchor.x-anchor-left,
+.x-popup-menu .x-anchor.x-anchor-right,
+.x-popup-menu .x-anchor.x-anchor-top,
+.x-popup-menu .x-anchor.x-anchor-bottom {
+    background: #E1E2E4;
+}
+.x-popup-menu .x-button-label {
+    text-align: left;
+}
 
 
 
@@ -338,15 +352,108 @@
 	margin: 10px;
 	
 }
-.event_block{
-	padding-top: 5px;
-	
+.eventWrapper{
+	background-color: #FaFaF8;
+}
+.eventItem{
+	margin: 10px 10px 0 10px;
+        position: relative;
+        height: 100px;
 }
 
-.event_content {
-	width: 60%;
-	vertical-align: top;
-	float: left;
+.eventSubjectAvatar {
+    	border-radius: 20px;
+	height:40px;
+        width:40px;
+        display:inline-block;
+        align: left;
+        vertical-align: top;
+        left: 0px;
+        top: 0px;
+        position: relative;
+}
+
+.eventSubjectName {
+    	font-weight: bold;
+	padding: 5px 0 0 5px;
+        align: left;
+        display:inline-block;
+        vertical-align: top;
+        font-size: 13px;
+}
+
+.eventTime {
+    	display:inline-block;
+        padding: 0 0 0 5px;
+        align: left;
+        vertical-align: top;        
+        position: absolute;
+        top: 18px;
+        left: 70px;
+}
+
+.eventType {
+    	display:inline-block;
+        align: left;
+        vertical-align: top;
+        position: absolute;
+        top: 18px;
+        left: 45px;
+        height: 20px;
+        width: 20px;
+}
+
+.eventPost {
+    	display:inline-block;
+        align: left;
+        vertical-align: top;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        height: 40px;
+        width: 100px;
+        word-wrap: break-word;
+        overflow-y: hidden;
+}
+
+.eventPic {
+    	display:inline-block;
+        align: center;
+        vertical-align: top;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background-size: cover;
+        background-position: center;
+}
+
+.eventComment {
+    	display:inline-block;
+        align: left;
+        vertical-align: top;
+        position: absolute;
+        top: 45px;
+        left: 0px;
+        height: 40px;
+        word-wrap: break-word;
+        overflow-y: hidden;
+}
+
+.picProcessingWrapper {
+	background: none repeat scroll 0 0 #fff;
+}
+
+.addPicCls {
+    width: 150px;
+    height: 150px;
+    background-image: url("../../mockdata/img/picplus.png");
+    background-size: cover;
+    background-position: center center; 
+    display: inline-block;
+    margin: 2px;
 }
 
 .refreshEventsBtn, .refreshNewsBtn, .refreshBestBtn {
@@ -367,6 +474,15 @@
  
 .logoutBtn{
 	margin: 5px 10px 5px 5px;
+}
+   
+.startPicCls{
+}
+   
+.canvasWrapperCls{
+    position: absolute;
+    top: 0;
+    left: 100px;
 }
    
 .one_article{

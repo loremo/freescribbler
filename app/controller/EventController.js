@@ -6,7 +6,7 @@ Ext.define("FreescribbleApp.controller.EventController", {
         loading: false,
         scroller: true,
         refs: {
-            eventPage: 'eventspage', 
+            eventPage: 'eventpage', 
             eventContent: '[itemId = eventContent]',
         },
         
@@ -26,7 +26,7 @@ Ext.define("FreescribbleApp.controller.EventController", {
     },
         
     onShowEvents: function() {
-        
+        console.log('start onShowEvents');
         var me = this,
             loginSessionStore = Ext.getStore('LogInSession').getData();
         sessionStore = loginSessionStore.items[0].data;

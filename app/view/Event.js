@@ -1,4 +1,4 @@
-Ext.define('FreescribbleApp.view.event', {
+Ext.define('FreescribbleApp.view.Event', {
     extend: 'Ext.Panel',
     xtype: 'eventpage',
     config: {
@@ -6,6 +6,7 @@ Ext.define('FreescribbleApp.view.event', {
         scrollable: true,
         title: 'События',
         iconCls: 'event',
+        cls: 'eventWrapper',
         items:[
             {
                 itemId: 'eventContent',

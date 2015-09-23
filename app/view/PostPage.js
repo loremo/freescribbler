@@ -13,6 +13,17 @@ Ext.define('FreescribbleApp.view.PostPage', {
                 itemId: 'postContentBlock',
             },
             {
+                xtype: "textareafield",
+                itemId: 'commentInputField',
+                placeholder: 'Напиши комментарий...',
+            },
+            {
+                xtype: 'button',
+                text: 'Отправить',
+                itemId: 'submitCommentBtn',
+                ui: 'confirm'
+            },
+            {
                 itemId: 'moreCommentsBtn',
                 itemCls: 'moreCommentsCls',
                 html: 'предыдущие комментарии'
